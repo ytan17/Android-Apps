@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.depaul.csc472.yt_remotecontrol.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="116dp"
+        android:background="@color/dodgerblue"
+        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:id="@+id/constraintLayout"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/LogoID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="45dp"
+            android:text="@string/logo_str"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/powerTextID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="21dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/power_str"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.596"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/powerStatus"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/volumeTextID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/volume_str"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@+id/powerTextID"
+            app:layout_constraintTop_toBottomOf="@+id/powerTextID" />
+
+        <TextView
+            android:id="@+id/channelTextID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="11dp"
+            android:text="@string/channel_str"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/channelStatus"
+            app:layout_constraintLeft_toLeftOf="@+id/volumeTextID"
+            app:layout_constraintTop_toBottomOf="@+id/volumeTextID"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/powerStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:layout_marginRight="56dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/power_status_str"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/stateTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volume_status_str"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@+id/powerStatus"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/powerStatus" />
+
+        <TextView
+            android:id="@+id/channelStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/channel_status_str"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@+id/stateTextview"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/stateTextview" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/configureID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/control_str"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/power_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/power_control_str"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/configureID" />
+
+    <TextView
+        android:id="@+id/volume_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/volume_control_str"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/power_control"
+        app:layout_constraintLeft_toLeftOf="@+id/power_control"
+        android:layout_marginLeft="0dp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/channel_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/channel_control"
+        app:layout_constraintLeft_toLeftOf="@+id/volume_control"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button0"
+        tools:ignore="RtlHardcoded" />
+
+    <Switch
+        android:id="@+id/power_switch"
+        android:checked="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:onClick="onSwitchClicked"
+        app:layout_constraintLeft_toRightOf="@+id/power_control"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/configureID" />
+
+    <SeekBar
+        android:id="@+id/volumeSeekBar"
+        android:layout_width="271dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/volume_control"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/power_switch"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:progress="50"/>
+
+    <Button
+        android:id="@+id/button0"
+        android:text="@string/b0"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/volumeSeekBar"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button1"
+        android:text="@string/b1"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button0"
+        app:layout_constraintLeft_toRightOf="@+id/button0"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/button2"
+        android:layout_marginRight="8dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:text="@string/b2"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/volumeSeekBar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button1"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_column="1"
+        android:text="@string/b3"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/button0"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/button0"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button4"
+        android:text="@string/b4"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/button1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button5"
+        android:text="@string/b5"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/button2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button4"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_column="1"
+        android:text="@string/b6"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/button3"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button7"
+        android:text="@string/b7"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="-96dp"
+        app:layout_constraintLeft_toLeftOf="@+id/button4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button6"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button8"
+        android:text="@string/b8"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/button5"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button7"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_column="1"
+        android:text="@string/b9"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/button6"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:text="@string/bPlus"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/button7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button9"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:text="@string/bMinus"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/button8"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonPlus"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/favorite_channel"
+        android:textSize="16sp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/channel_control"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/button9"
+        android:id="@+id/textView12"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/buttonF1"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/bF1"
+        app:layout_constraintLeft_toLeftOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/button9"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/buttonF2"
+        android:text="@string/bF2"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonF1"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonPlus"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/buttonF3"
+        android:text="@string/bF3"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonF2"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonMinus"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/buttonToDVR"
+        android:layout_width="179dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/switch_to_dvr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/buttonConfigure"
+        app:layout_constraintTop_toBottomOf="@+id/buttonF1"
+        app:layout_constraintVertical_bias="0.503"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/buttonConfigure"
+        android:layout_width="179dp"
+        android:layout_height="37dp"
+        android:text="@string/configure"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonToDVR"
+        tools:ignore="RtlHardcoded" />
+
+</android.support.constraint.ConstraintLayout>

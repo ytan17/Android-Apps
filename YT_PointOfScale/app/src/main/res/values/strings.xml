@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">YT_PointOfScale</string>
+    <string name="new_order">NEW ORDER</string>
+    <string name="new_item">NEW ITEM</string>
+    <string name="item">Item: </string>
+    <string name="hint_item">Enter an Item name</string>
+    <string name="quantity">Quantity: </string>
+    <string name="hint_quantity">1</string>
+    <string name="price">Unit Price: </string>
+    <string name="hint_price">0.00</string>
+    <string name="total">TOTAL</string>
+    <string name="totalCal">$0.00</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

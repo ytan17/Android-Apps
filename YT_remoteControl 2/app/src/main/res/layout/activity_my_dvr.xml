@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.depaul.csc472.yt_remotecontrol.my_dvr">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="116dp"
+        android:background="@color/dodgerblue"
+        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:id="@+id/constraintLayout"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/logo2ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/logo2_str"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/stateID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/state2_str"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@+id/state_strID"
+            app:layout_constraintTop_toBottomOf="@+id/state_strID" />
+
+        <TextView
+            android:id="@+id/state_strID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/power2_str"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.31"
+            app:layout_constraintLeft_toRightOf="@+id/logo2ID"
+            app:layout_constraintRight_toLeftOf="@+id/powerStatus"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/powerStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:layout_marginRight="56dp"
+            android:text="@string/power2_status_str"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/state_strID"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/stateTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/state2_status_str"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/stateID"
+            app:layout_constraintLeft_toLeftOf="@+id/powerStatus" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/control2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/dvr_remote_control"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/powerControl2"
+        android:layout_width="43dp"
+        android:layout_height="18dp"
+        android:text="@string/power_control_str"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/control2"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <Switch
+        android:id="@+id/powerSwitch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:checked="true"
+        android:onClick="onSwitchClicked"
+        app:layout_constraintBaseline_toBaselineOf="@+id/powerControl2"
+        app:layout_constraintLeft_toRightOf="@+id/powerControl2" />
+
+    <Button
+        android:id="@+id/playBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/play"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/powerControl2"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/stopBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stop"
+        app:layout_constraintBaseline_toBaselineOf="@+id/playBtn"
+        app:layout_constraintRight_toLeftOf="@+id/pauseBtn"
+        android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/playBtn"
+        android:layout_marginLeft="8dp" />
+
+    <Button
+        android:id="@+id/pauseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="32dp"
+        android:text="@string/pause"
+        app:layout_constraintBaseline_toBaselineOf="@+id/stopBtn"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/forwardBtn"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/fast_forward"
+        app:layout_constraintLeft_toLeftOf="@+id/playBtn"
+        app:layout_constraintTop_toBottomOf="@+id/playBtn"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/rewindBtn"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/fast_rewind"
+        app:layout_constraintBaseline_toBaselineOf="@+id/forwardBtn"
+        app:layout_constraintLeft_toRightOf="@+id/forwardBtn"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/recordBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/record"
+        app:layout_constraintLeft_toLeftOf="@+id/forwardBtn"
+        app:layout_constraintTop_toBottomOf="@+id/forwardBtn"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/switch_to_tv"
+        android:layout_width="320dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/switch_to_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recordBtn" />
+
+</android.support.constraint.ConstraintLayout>

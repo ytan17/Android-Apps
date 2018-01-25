@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">YT_remoteControl</string>
+    <color name="dodgerblue">#1E90FF</color>
+    <!--mainActivity-->
+    <string name="logo_str">My TV</string>
+    <string name="power_str">TV Power: </string>
+    <string name="volume_str">Speaker Volume: </string>
+    <string name="channel_str">Current Channel: </string>
+    <string name="power_status_str">ON</string>
+    <string name="volume_status_str">50</string>
+    <string name="channel_status_str">187</string>
+    <string name="control_str">My Remote Control</string>
+    <string name="power_control_str">Power</string>
+    <string name="volume_control_str">Volume</string>
+    <string name="channel_control">Channel</string>
+    <string name="favorite_channel">Favorite\nChannel</string>
+    <string name="b0">0</string>
+    <string name="b1">1</string>
+    <string name="b2">2</string>
+    <string name="b3">3</string>
+    <string name="b4">4</string>
+    <string name="b5">5</string>
+    <string name="b6">6</string>
+    <string name="b7">7</string>
+    <string name="b8">8</string>
+    <string name="b9">9</string>
+    <string name="bPlus">CH+</string>
+    <string name="bMinus">CH-</string>
+    <string name="bF1">ABC</string>
+    <string name="bF2">NBC</string>
+    <string name="bF3">CBS</string>
+
+    <!--MyDVR_Activity-->
+    <string name="logo2_str">My DVR</string>
+    <string name="power2_str">DVR Power: </string>
+    <string name="state2_str">State: </string>
+    <string name="power2_status_str">ON</string>
+    <string name="state2_status_str">Stopped</string>
+    <string name="dvr_remote_control">DVR Remote Control</string>
+    <string name="fast_forward">FAST FORWARD</string>
+    <string name="fast_rewind">FAST REWIND</string>
+    <string name="pause">PAUSE</string>
+    <string name="play">PLAY</string>
+    <string name="record">RECORD</string>
+    <string name="stop">STOP</string>
+    <string name="favorite_channel_button">Favorite\nChannel\n Button</string>
+    <string name="configure">CONFIGURE</string>
+    <string name="switch_to_dvr">SWITCH TO DVR</string>
+    <string name="_0">0</string>
+    <string name="cancel">CANCEL</string>
+
+    <!--configure-->
+    <string name="configure_favorite_channels">Configure Favorite Channels</string>
+    <string name="label">Label</string>
+    <string name="left">Left</string>
+    <string name="middle">Middle</string>
+    <string name="right">Right</string>
+    <string name="save">SAVE</string>
+    <string name="switch_to_tv">SWITCH TO TV</string>
+
+</resources>
